@@ -1,0 +1,197 @@
+body {
+    background-color: rgb(241, 234, 233); }
+
+#calendar{
+    margin-left: 4%;
+    width: 45%;
+    background-color: rgba(197, 76, 62, 0.267);;
+    font-family: 'Livvic', sans-serif;
+    float: left;
+    clear: both;
+}
+#wizyta{
+    margin-left: 4%;
+    width: 45%;
+    background-color: rgb(197, 75, 62);
+    float: right;
+    clear: both;
+}
+
+    #logo {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0px;
+    background-color: rgb(241, 234, 233); }
+#menu {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0px;
+    background-color: rgb(197, 75, 62);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+#obecny{
+    color: rgb(255, 255, 255);
+    background-color: rgb(144, 38, 26); }
+
+#stopka {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Livvic', sans-serif;
+    background-color: rgb(217, 198, 198); }
+
+#nav {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(197, 75, 62); }
+ul {
+    margin-left: 50px; }
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    line-height: 60px; }
+
+ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 0 80px;
+    display: block; }
+
+ul li a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(144, 38, 26); }
+
+#tytul {
+    text-align: center;
+    font-family: 'Livvic', sans-serif;
+    background-color: rgba(133, 129, 128, 0.067); }
+
+
+#tekst {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+    font-family: 'Livvic', sans-serif;
+    background-color: rgba(133, 129, 128, 0.267); }
+
+#regulamin {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: left;
+    font-family: 'Livvic', sans-serif;
+    background-color: rgba(133, 129, 128, 0.267); }    
+
+#voucher {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center; }
+
+.pojemnik {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    float: left; }
+
+.pojemnik1 {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    float: left; }
+
+.pojemnik2 {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    float: left; }
+    
+.pojemnik3 {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    float: left; }
+
+.kontakt {
+    width: 91%;
+    float: right;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(133, 129, 128, 0.267) }
+
+.media {
+    display: inline-block;
+    background-color: rgba(133, 129, 128, 0.267) ;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    margin-bottom: 15px;
+
+    box-shadow: 0 5px 15px -5ps #00000070;
+    color: rgb(197, 75, 62);
+    overflow: hidden;
+    position: relative;
+}
+
+.media i{
+    line-height: 80px;
+    transition: 0.2s linear;
+}
+
+.media:hover i{
+    transform: scale(1.3);
+    color: rgba(150, 1, 1, 0.342)
+}
+
+.media::before{
+    content: "";
+    position: absolute;
+    width: 180%;
+    height: 15%;
+    background: rgba(5, 5, 5, 0.116) ;
+    transform: rotate(45deg);
+
+}
+
+.media:hover::before{
+    animation: aaa 0.7s 1;
+    top: 10%;
+    left: 10%;
+}
+
+@keyframes aaa{
+    0%{left: 10%;
+        top: -20%;
+         }
+    50%{left: -110%;
+        top: 90%; }
+    100%{left: 10%;
+        top: -20%; }
+    
+}
+.zdjęcia {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(133, 129, 128, 0.267); }
+
+#map {
+    height: 200px;
+    width: 100%;
+}
+
+p {
+    padding: 4px;
+}

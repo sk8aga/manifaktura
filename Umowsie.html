@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Strona.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="shortcut icon" type="image/png" href="img/lakier.png">
+    <title>Kontakt</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
+
+</head>
+<body>
+<div id="container">
+    <div id=logo>
+        <img src="logo.png" width="800">
+    </div>
+
+<div id="menu">
+    <ul>
+        <li><a href="Strona Główna.html">Strona Główna</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Vouchery.html">Vouchery</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        <li><a href="Cennik.html">Cennik</a></li>
+        <li id="obecny"><a href="Umowsie.html">Umów się</a></li>
+    </ul>
+</div>
+
+<div id="tytul">
+    <h2>Zarezerwuj wizytę</h2>
+</div>
+
+<div>
+    <title>Moja strona z Angular i kalendarzem Google</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
+
+<body >
+
+    <form ng-submit="saveAppointment()">
+        <label for="service">Usługa:</label>
+        <select id="service" ng-model="selectedService" required>
+            <option value="">Wybierz usługę</option>
+            <option value="Manicure hybrydowy">Manicure hybrydowy</option>
+            <option value="Manicure żelowy">Manicure żelowy</option>
+        </select><br>
+
+        <label for="date">Data wizyty:</label>
+        <input type="date" id="date" ng-model="selectedDate" required><br>
+
+        <label for="time">Godzina wizyty:</label>
+        <select id="time" ng-model="selectedTime" required>
+            <option value="">Wybierz godzinę</option>
+            <option ng-repeat="time in availableTimes" value="{{ time }}">{{ time }}</option>
+        </select><br>
+
+        <input type="submit" value="Zarezerwuj">
+    </form>
+
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller('myController', function($scope) {
+            $scope.availableTimes = [];
+
+            $scope.$watch('selectedDate', function(newDate) {
+                if (newDate) {
+                    if (isSaturday(newDate)) {
+                        $scope.availableTimes = ['9:00', '10:30', '12:00', '13:30'];
+                    } else {
+                        $scope.availableTimes = ['8:00', '9:30', '11:00', '12:30', '14:00', '15:30', '17:00', '18:30'];
+                    }
+                }
+            });
+
+            $scope.saveAppointment = function() {
+                var selectedService = $scope.selectedService;
+                var selectedDate = $scope.selectedDate;
+                var selectedTime = $scope.selectedTime;
+
+                // Tutaj możesz zrobić coś z wybranymi danymi, np. wysłać żądanie do serwera
+
+                alert('Rezerwacja zapisana:\nUsługa: ' + selectedService + '\nData: ' + selectedDate + '\nGodzina: ' + selectedTime);
+            };
+
+            function isSaturday(date) {
+                return date.getDay() === 6; // 6 oznacza sobotę (getDay() zwraca wartość od 0 do 6, gdzie 0 to niedziela)
+            }
+        });
+    </script>
+
+</body>
+</html>
